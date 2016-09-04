@@ -11,7 +11,9 @@ uses
   LUX.D1.Complex in '_LIBRARY\LUXOPHIA\LUX.D1.Complex.pas',
   LUX.DiscreteTrans.D1 in '_LIBRARY\LUXOPHIA\LUX.DiscreteTrans.D1.pas',
   LUX in '_LIBRARY\LUXOPHIA\LUX\LUX.pas',
-  LUX.D1 in '_LIBRARY\LUXOPHIA\LUX\LUX.D1.pas';
+  LUX.D1 in '_LIBRARY\LUXOPHIA\LUX\LUX.D1.pas',
+  LUX.FMX in '_LIBRARY\LUXOPHIA\LUX.FMX\LUX.FMX.pas',
+  LUX.D3 in '_LIBRARY\LUXOPHIA\LUX\LUX.D3.pas';
 
 {$R *.res}
 

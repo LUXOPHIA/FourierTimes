@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation,
-  LUX, LUX.Sound,
+  LUX, LUX.FMX, LUX.Sound,
   Core;
 
 type
@@ -58,7 +58,7 @@ function TForm1.ValueColor( const Value_:Single ) :TAlphaColor;
      end;
 //------------------------------------------------------------
 begin
-     Result := _Grad.Color[ Round( ( _Grad.Width - 1 ) * ToneMap( 1000 * Value_ ) ), 0 ];
+     Result := _Grad.Pixels[ Round( ( _Grad.Width - 1 ) * ToneMap( 1000 * Value_ ) ), 0 ];
 end;
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -113,8 +113,8 @@ begin
      begin
           for Y := 0 to _FreqN-1 do
           begin
-               B.Color[ X, _FreqN - Y ] := ValueColor( ( _FourierTimesL.MapTF[ I + X, Y ] - _FourierTimesR.MapTF[ I + X, Y ] ).Size );
-               B.Color[ X, _FreqN + Y ] := ValueColor( _FourierTimesR.MapTF[ I + X, Y ].Size );
+               B.Pixels[ X, _FreqN - Y ] := ValueColor( ( _FourierTimesL.MapTF[ I + X, Y ] - _FourierTimesR.MapTF[ I + X, Y ] ).Size );
+               B.Pixels[ X, _FreqN + Y ] := ValueColor( _FourierTimesR.MapTF[ I + X, Y ].Size );
           end;
      end;
 
