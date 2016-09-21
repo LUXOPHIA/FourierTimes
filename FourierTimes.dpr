@@ -16,7 +16,8 @@ uses
   LUX.Audio in '_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.pas',
   LUX.Color.Map.D1 in '_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.Map.D1.pas',
   LUX.Color in '_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.pas',
-  LUX.Map.D1 in '_LIBRARY\LUXOPHIA\LUX.Map\LUX.Map.D1.pas';
+  LUX.Map.D1 in '_LIBRARY\LUXOPHIA\LUX.Map\LUX.Map.D1.pas',
+  LUX.Signal.Fourier.D1 in '_LIBRARY\LUXOPHIA\LUX.Signal\LUX.Signal.Fourier.D1.pas';
 
 {$R *.res}
 
