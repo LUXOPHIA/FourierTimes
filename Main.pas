@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation,
   LUX, LUX.FMX, LUX.Color.Map.D1, LUX.Audio.WAV,
-  Core;
+  LUX.Signal.Fourier.D1;
 
 type
   TForm1 = class(TForm)
