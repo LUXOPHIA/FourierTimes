@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation,
-  LUX, LUX.FMX, LUX.Sound,
+  LUX, LUX.FMX, LUX.Audio.WAV,
   Core;
 
 type
@@ -65,7 +65,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-     _FileWAV := TFileWAV.Create( '../../_DATA\Sound.wav' );
+     _FileWAV := TFileWAV.Create( '../../_DATA/Sound.wav' );
 
      _IterL := TFileWAVIterL.Create( _FileWAV );
      _IterR := TFileWAVIterR.Create( _FileWAV );

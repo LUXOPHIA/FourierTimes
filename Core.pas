@@ -6,7 +6,7 @@ uses System.Types, System.SysUtils, System.Classes,
      System.UITypes, System.Math, System.Math.Vectors,
      FMX.Types, FMX.Graphics, FMX.Controls, FMX.Objects,
      FMX.Types3D, FMX.Controls3D, FMX.MaterialSources, FMX.Objects3D,
-     LUX, LUX.D1, LUX.Complex, LUX.D1.Complex, LUX.DiscreteTrans.Fourier.D1;
+     LUX, LUX.D1, LUX.Complex, LUX.Complex.D1, LUX.DiscreteTrans.Fourier.D1;
 
 type //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$【型】
 
