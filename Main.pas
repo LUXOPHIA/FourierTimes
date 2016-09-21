@@ -6,8 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation,
-  LUX, LUX.FMX, LUX.Color.Map.D1, LUX.Audio.WAV,
-  LUX.Signal.Fourier.D1;
+  LUX, LUX.FMX, LUX.Color.Map.D1, LUX.Audio.WAV, LUX.Signal.Fourier.D1;
 
 type
   TForm1 = class(TForm)
@@ -111,12 +110,12 @@ begin
 
      I := Round( ScrollBar1.Value );
 
-     for X := 0 to _ViewW-1 do
+     for Y := 0 to _FreqN-1 do
      begin
-          for Y := 0 to _FreqN-1 do
+          for X := 0 to _ViewW-1 do
           begin
-               B.Pixels[ X, _FreqN - Y ] := ValueColor( ( _FourierTimesL.MapTF[ I + X, Y ] - _FourierTimesR.MapTF[ I + X, Y ] ).Size );
-               B.Pixels[ X, _FreqN + Y ] := ValueColor( _FourierTimesR.MapTF[ I + X, Y ].Size );
+               B.Pixels[ X, _FreqN-1 - Y ] := ValueColor( _FourierTimesL.MapTF[ I + X, Y ].Size );
+               B.Pixels[ X, _FreqN   + Y ] := ValueColor( _FourierTimesR.MapTF[ I + X, Y ].Size );
           end;
      end;
 
