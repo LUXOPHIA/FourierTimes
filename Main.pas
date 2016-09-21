@@ -6,17 +6,17 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.StdCtrls, FMX.Objects, FMX.Controls.Presentation,
-  LUX, LUX.FMX, LUX.Audio.WAV,
+  LUX, LUX.FMX, LUX.Color.Map.D1, LUX.Audio.WAV,
   Core;
 
 type
   TForm1 = class(TForm)
+    Image1: TImage;
     ScrollBar1: TScrollBar;
     Panel1: TPanel;
       Panel2: TPanel;
           Button1: TButton;
     Image2: TImage;
-    Image1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -24,7 +24,7 @@ type
     procedure Image1Paint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
   private
     { private 宣言 }
-    _Grad :TBitmapData;
+    _Grad :TGradation1D;
   public
     { public 宣言 }
     _FileWAV       :TFileWAV;
@@ -51,14 +51,14 @@ implementation //###############################################################
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& public
 
 function TForm1.ValueColor( const Value_:Single ) :TAlphaColor;
-//------------------------------------------------------------
+//････････････････････････････････････････････････････････････
      function ToneMap( const V_:Single ) :Single;
      begin
-          Result := V_ / ( 1 + V_ )
+          Result := 1000 * V_ / ( 1 + V_ )
      end;
-//------------------------------------------------------------
+//････････････････････････････････････････････････････････････
 begin
-     Result := _Grad.Pixels[ Round( ( _Grad.Width - 1 ) * ToneMap( 1000 * Value_ ) ), 0 ];
+     Result := _Grad.Interp( ToneMap( Value_ ) );
 end;
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -82,12 +82,14 @@ begin
 
      ScrollBar1.Max := _TimeN - _ViewW;
 
-     Image2.Bitmap.Map( TMapAccess.Read, _Grad );
+     Image2.Bitmap.LoadFromFile( '../../_DATA/ColorMap.png' );
+
+     _Grad := TGradation1D.Create( '../../_DATA/ColorMap.png' );
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
-     Image2.Bitmap.Unmap( _Grad );
+     _Grad         .Free;
 
      _FourierTimesL.Free;
      _FourierTimesR.Free;

@@ -295,6 +295,9 @@
         <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Complex\LUX.Complex.D1.pas"/>
         <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.WAV.pas"/>
         <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.pas"/>
+        <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.Map.D1.pas"/>
+        <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.pas"/>
+        <DCCReference Include="_LIBRARY\LUXOPHIA\LUX.Map\LUX.Map.D1.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

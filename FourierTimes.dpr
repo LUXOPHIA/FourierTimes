@@ -14,7 +14,10 @@ uses
   LUX.Complex in '_LIBRARY\LUXOPHIA\LUX.Complex\LUX.Complex.pas',
   LUX.Complex.D1 in '_LIBRARY\LUXOPHIA\LUX.Complex\LUX.Complex.D1.pas',
   LUX.Audio.WAV in '_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.WAV.pas',
-  LUX.Audio in '_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.pas';
+  LUX.Audio in '_LIBRARY\LUXOPHIA\LUX.Audio\LUX.Audio.pas',
+  LUX.Color.Map.D1 in '_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.Map.D1.pas',
+  LUX.Color in '_LIBRARY\LUXOPHIA\LUX.Color\LUX.Color.pas',
+  LUX.Map.D1 in '_LIBRARY\LUXOPHIA\LUX.Map\LUX.Map.D1.pas';
 
 {$R *.res}
 

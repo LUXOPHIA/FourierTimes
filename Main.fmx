@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'FourierTimes'
-  ClientHeight = 600
-  ClientWidth = 800
+  ClientHeight = 555
+  ClientWidth = 820
   Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -13,8 +13,8 @@ object Form1: TForm1
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Bottom
-    Position.Y = 500.000000000000000000
-    Size.Width = 800.000000000000000000
+    Position.Y = 455.000000000000000000
+    Size.Width = 820.000000000000000000
     Size.Height = 100.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'pushpanel'
@@ -56,18 +56,18 @@ object Form1: TForm1
               69000060401A0000189006000006A4010080016900006038D3F41BDF42BF5EA7
               DDFC5F0000000049454E44AE426082}
           end>
-        Position.X = 580.000000000000000000
+        Position.X = 590.000000000000000000
         Position.Y = 10.000000000000000000
-        Size.Width = 211.000000000000000000
-        Size.Height = 26.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 20.000000000000000000
         Size.PlatformDefault = False
         WrapMode = Stretch
       end
       object Button1: TButton
-        Position.X = 695.000000000000000000
-        Position.Y = 45.000000000000000000
-        Size.Width = 96.000000000000000000
-        Size.Height = 46.000000000000000000
+        Position.X = 690.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         Text = #23455#34892
@@ -84,8 +84,8 @@ object Form1: TForm1
     Margins.Right = 10.000000000000000000
     Margins.Bottom = 10.000000000000000000
     Position.X = 10.000000000000000000
-    Position.Y = 470.000000000000000000
-    Size.Width = 780.000000000000000000
+    Position.Y = 425.000000000000000000
+    Size.Width = 800.000000000000000000
     Size.Height = 20.000000000000000000
     Size.PlatformDefault = False
     OnChange = ScrollBar1Change
@@ -95,13 +95,12 @@ object Form1: TForm1
       item
       end>
     Align = Client
-    DisableInterpolation = True
     Margins.Left = 10.000000000000000000
     Margins.Top = 10.000000000000000000
     Margins.Right = 10.000000000000000000
-    Margins.Bottom = 5.000000000000000000
-    Size.Width = 780.000000000000000000
-    Size.Height = 450.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 800.000000000000000000
+    Size.Height = 400.000000000000000000
     Size.PlatformDefault = False
     WrapMode = Stretch
     OnPaint = Image1Paint
